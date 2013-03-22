@@ -1,6 +1,6 @@
 package de.akuz.android.praisd.service;
 
-import de.akuz.android.praisd.service.FlattrUserData;
+import de.akuz.android.praisd.sdk.FlattrUserData;
 import de.akuz.android.praisd.service.IFlattrResultAsyncCallback;
 
 interface IFlattrServiceAsync {

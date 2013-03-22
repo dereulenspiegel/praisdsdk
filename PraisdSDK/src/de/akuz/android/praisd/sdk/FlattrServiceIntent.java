@@ -1,4 +1,4 @@
-package de.akuz.android.praisd.service;
+package de.akuz.android.praisd.sdk;
 
 import android.content.Intent;
 
