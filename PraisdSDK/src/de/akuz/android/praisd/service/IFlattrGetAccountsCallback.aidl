@@ -1,6 +1,6 @@
 package de.akuz.android.praisd.service;
 
-interface IFlattrResultAsyncCallback {
-	void success(boolean result);
+interface IFlattrGetAccountsCallback {
+	void success(out String[] availableAccounts);
 	void error(int errorCode, String message);
 }

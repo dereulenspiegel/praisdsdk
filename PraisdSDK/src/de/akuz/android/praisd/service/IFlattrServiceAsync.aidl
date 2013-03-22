@@ -2,6 +2,8 @@ package de.akuz.android.praisd.service;
 
 import de.akuz.android.praisd.sdk.FlattrUserData;
 import de.akuz.android.praisd.service.IFlattrResultAsyncCallback;
+import de.akuz.android.praisd.service.IFlattrUserDataCallback;
+import de.akuz.android.praisd.service.IFlattrGetAccountsCallback;
 
 interface IFlattrServiceAsync {
 
@@ -13,12 +15,12 @@ interface IFlattrServiceAsync {
 	
 	void subscribeToThingWithAccount(String accountname, String thingId, IFlattrResultAsyncCallback callback);
 	
-	boolean hasUserSubscribedToThing(String thingId, IFlattrResultAsyncCallback callback);
+	void hasUserSubscribedToThing(String thingId, IFlattrResultAsyncCallback callback);
 	
-	boolean hasUserSubscribedToThingWithAccount(String accountname, String thingId, IFlattrResultAsyncCallback callback);
+	void hasUserSubscribedToThingWithAccount(String accountname, String thingId, IFlattrResultAsyncCallback callback);
 	
-	String[] getAvailableFlattrAccounts();
+	void getAvailableFlattrAccounts(IFlattrGetAccountsCallback callback);
 	
-	FlattrUserData getUserDataForAccount(String accountname);
+	void getUserDataForAccount(String accountname, IFlattrUserDataCallback callback);
 
 }

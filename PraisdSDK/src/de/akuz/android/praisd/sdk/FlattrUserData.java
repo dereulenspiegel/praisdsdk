@@ -37,6 +37,10 @@ public class FlattrUserData implements Parcelable {
 	}
 
 	private FlattrUserData(Parcel source) {
+		readFromParcel(source);
+	}
+
+	public void readFromParcel(Parcel source) {
 		city = source.readString();
 		country = source.readString();
 		description = source.readString();
